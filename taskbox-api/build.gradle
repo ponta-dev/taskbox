@@ -1,0 +1,23 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version "${spring_boot_version}"
+}
+
+compileJava {
+	options.encoding = 'UTF-8'
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
+group = 'com.github.pontadev'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Spring
+	//// Web
+	implementation "org.springframework.boot:spring-boot-starter-web:${spring_boot_version}"
+}
