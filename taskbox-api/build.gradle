@@ -20,4 +20,12 @@ dependencies {
 	// Spring
 	//// Web
 	implementation "org.springframework.boot:spring-boot-starter-web:${spring_boot_version}"
+	
+	//// DB
+	implementation "org.springframework.boot:spring-boot-starter-jdbc:${spring_boot_version}"
+	implementation "org.springframework.boot:spring-boot-starter-data-jpa:${spring_boot_version}"
+	//if("${build_profile_active}".equals("dev")) {
+		runtimeOnly "com.h2database:h2:${h2_jdbc_version}"
+	//}else {
+	//}
 }
